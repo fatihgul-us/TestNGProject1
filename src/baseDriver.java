@@ -8,9 +8,9 @@ import org.testng.annotations.BeforeClass;
 
 public class baseDriver {
 
-    private WebDriver driver;
-    private WebDriverWait wait;
-    private Actions action;
+    protected WebDriver driver;
+    protected WebDriverWait wait;
+    protected Actions action;
 
     @BeforeClass(alwaysRun = true)
     public void baseDriver() {

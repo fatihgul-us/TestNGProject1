@@ -36,6 +36,9 @@ public WebElement myAddress;
     @FindBy(id = "id_state")
     public WebElement idState;
 
+    @FindBy(id = "postcode")
+    public WebElement postCode;
+
     @FindBy(id = "id_country")
     public WebElement idCountry;
 
