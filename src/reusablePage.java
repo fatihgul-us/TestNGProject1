@@ -1,3 +1,4 @@
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -35,11 +36,38 @@ public WebElement myAddress;
     @FindBy(id = "id_state")
     public WebElement idState;
 
-    @FindBy(id = "city")
-    public WebElement cityfff;
+    @FindBy(id = "id_country")
+    public WebElement idCountry;
 
-    @FindBy(id = "city")
-    public WebElement cityf;
+    @FindBy(id = "phone_mobile")
+    public WebElement phoneMobile;
+
+    @FindBy(id = "alias")
+    public WebElement alias;
+
+    @FindBy(id = "submitAddress")
+    public WebElement submitAddress;
+
+    @FindBy(xpath = "//ul[@class='last_item alternate_item box']  //li[1]")
+    public WebElement addressTitle;
+
+    @FindBy(xpath = "//ul[@class='last_item alternate_item box']  //li[2]")
+    public WebElement nameSurname;
+
+    @FindBy(xpath = "//ul[@class='last_item alternate_item box']  //li[3]")
+    public WebElement adressLine1;
+    @FindBy(xpath = "//ul[@class='last_item alternate_item box']  //li[4]")
+    public WebElement adressLine2;
+    @FindBy(xpath = "//ul[@class='last_item alternate_item box']  //li[5]")
+    public WebElement country;
+    @FindBy(xpath = "//ul[@class='last_item alternate_item box']  //li[6]")
+    public WebElement phoneNumber;
+
+    @FindBy(xpath = "//ul[@class='last_item alternate_item box']  //li[9] /a[1]")
+    public WebElement ubdateButton;
+
+    @FindBy(xpath = "//ul[@class='last_item alternate_item box']  //li[9] /a[2]")
+    public WebElement deleteButton;
 
 
 
