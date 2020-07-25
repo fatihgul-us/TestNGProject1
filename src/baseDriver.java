@@ -11,6 +11,8 @@ public class baseDriver {
     protected WebDriver driver;
     protected WebDriverWait wait;
     protected Actions action;
+    protected reusablePage elements;
+
 
     @BeforeClass(alwaysRun = true)
     public void baseDriver() {
@@ -25,6 +27,7 @@ public class baseDriver {
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 10);
         action = new Actions(driver);
+        elements = new reusablePage(driver);
 
         driver.get("http://automationpractice.com/index.php");
         driver.manage().window().maximize();

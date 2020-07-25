@@ -5,17 +5,17 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class reusablePage extends baseDriver{
+public class reusablePage {
 
-    private WebDriver driver;
+    public WebDriver driver;
 
     public reusablePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(this.driver, this);
     }
 
-@FindBy(className = "icon-building")
-public WebElement myAddress;
+    @FindBy(css = "a[href='http://automationpractice.com/index.php?controller=addresses']")
+    public WebElement myAddress;
 
     @FindBy(css = "a[title='Add an address']")
     public WebElement addNewAddress;
@@ -57,13 +57,13 @@ public WebElement myAddress;
     @FindBy(xpath = "//ul[@class='last_item alternate_item box']  //li[2]")
     public WebElement nameSurname;
 
-    @FindBy(xpath = "//ul[@class='last_item alternate_item box']  //li[3]")
-    public WebElement adressLine1;
     @FindBy(xpath = "//ul[@class='last_item alternate_item box']  //li[4]")
-    public WebElement adressLine2;
+    public WebElement adressLine1;
     @FindBy(xpath = "//ul[@class='last_item alternate_item box']  //li[5]")
-    public WebElement country;
+    public WebElement adressLine2;
     @FindBy(xpath = "//ul[@class='last_item alternate_item box']  //li[6]")
+    public WebElement country;
+    @FindBy(xpath = "//ul[@class='last_item alternate_item box']  //li[8]")
     public WebElement phoneNumber;
 
     @FindBy(xpath = "//ul[@class='last_item alternate_item box']  //li[9] /a[1]")
