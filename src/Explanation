@@ -7,8 +7,7 @@ One member in the team should send the project to sena or ali but everyone push 
 After finishing the project create testNG.xml file and in this file run the TestNG Practices 1
 and TestNG Practices 2 run the project as parallel and in the chrome and in the firefox.
 Use the Thread.sleep as less as you can. Use a explicit wait.
-DO NOT DO THIS PROJECT IN THE MAIN METHOD PROJECT SHOULD BE IN THE
- TESTNG.
+DO NOT DO THIS PROJECT IN THE MAIN METHOD PROJECT SHOULD BE IN THE TESTNG.
 Use a page object model concept. Create a baseDriver class and login functionality should
 be done in this class.
 Use a page object model concept while working on the project.
@@ -25,5 +24,5 @@ Change the first name and last name
 Click on the save button
 Verify first name and last name is updated
 Click on the delete button
-Click on the okay 
+Click on the okay
 Verify address is removed from the website
