@@ -64,15 +64,17 @@ public class Project1 extends baseDriver {
     }
 
     @Test(dependsOnMethods = "updateAddress")
-    public void deleteAddress(){
+    public void deleteAddress() throws InterruptedException {
   //  List<WebElement> a =driver.findElements(By.cssSelector("div[class='col-xs-12 col-sm-6 address']"));
         elements.deleteButton.click();
         driver.switchTo().alert().accept();
 //        a =driver.findElements(By.cssSelector("div[class='col-xs-12 col-sm-6 address']"));
 //        Assert.assertEquals(1,a.size());
         boolean x;
+        Thread.sleep(3000);
         try{
-            elements.addressTitle.getText();
+          //  elements.addressTitle.getText();
+            System.out.println(elements.addressTitle.getText());
             x= true;
         }catch(Exception e){
              x= false;
