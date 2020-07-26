@@ -1,15 +1,11 @@
-package ReplitOdev1;
+package ReplitOdev3;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
 
 public class utilities {
 
@@ -25,7 +21,7 @@ public class utilities {
         System.setProperty("webdriver.chrome.driver","D:\\BrowserDriver\\chromedriver.exe" );
         driver = new ChromeDriver();
         js=(JavascriptExecutor) driver;
-        wait = new WebDriverWait(driver, 5);
+        wait = new WebDriverWait(driver, 10);
         action = new Actions(driver);
 
         driver.get("https://www.hotels.com/search.do?resolved-location=CITY%3A1482664%3AUNKNOWN%3AUNKNOWN&destination-id=\n" +

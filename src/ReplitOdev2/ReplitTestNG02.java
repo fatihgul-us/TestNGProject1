@@ -29,21 +29,7 @@ public class ReplitTestNG02 extends utilities {
         System.out.println(currencyMenu + " " + currenyText);
         Assert.assertTrue(currenyText.contains(currencyMenu));
 
-
     }
 
-//    public void cleanText(String text) {
-//        text = text.replaceAll("[^0-9. ]", "");
-//        text = text.trim();
-//        String[] a = text.split("[ ]");
-//
-//        double d = Double.parseDouble(a[0]);
-//        Assert.assertTrue(d <= 10.0);
-//        System.out.println("To city center: "+a[0]);
-//        d = Double.parseDouble(a[4]);
-//        Assert.assertTrue(d <= 10.0);
-//        System.out.println("To LAX: "+a[4]);
-//        System.out.println("-------------------------------------------");
-//    }
 }
 
