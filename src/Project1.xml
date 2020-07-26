@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Saturday Project" parallel="tests" thread-count="3">
+
+    <test name="Saturday Project-1-Chrome">
+        <parameter name="System" value="webdriver.chrome.driver"></parameter>
+        <parameter name="Driver" value="D:\BrowserDriver\chromedriver.exe"></parameter>
+        <parameter name="userName" value="atlanta@gmail.com"></parameter>
+        <parameter name="passWord" value="Asdf4321-"></parameter>
+        <parameter name="aliasName" value="Home Address"></parameter>
+        <classes>
+            <class name="Project1"></class>
+        </classes>
+    </test>
+
+    <test name="Saturday Project-1-FireFox">
+        <parameter name="System" value="webdriver.gecko.driver"></parameter>
+        <parameter name="Driver" value="D:\BrowserDriver\geckodriver.exe"></parameter>
+        <parameter name="userName" value="atlanta@gmail.com"></parameter>
+        <parameter name="passWord" value="Asdf4321-"></parameter>
+        <parameter name="aliasName" value="Work Address"></parameter>
+        <classes>
+            <class name="Project1"></class>
+        </classes>
+    </test>
+
+</suite>

@@ -20,7 +20,7 @@ public class Project1 extends baseDriver {
         String City = "Alpharetta";
         String PostCode = "30009";
         String phoneNumber = "1235432345";
-        String alias = "Home Addres";
+
 
 
 

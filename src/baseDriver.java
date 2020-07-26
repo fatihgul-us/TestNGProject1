@@ -2,9 +2,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 
 public class baseDriver {
 
@@ -12,19 +14,29 @@ public class baseDriver {
     protected WebDriverWait wait;
     protected Actions action;
     protected reusablePage elements;
-
+    protected String alias;
 
     @BeforeClass(alwaysRun = true)
-    public void baseDriver() {
+    @Parameters({"System","Driver","userName", "passWord","aliasName"})
+    public void baseDriver(String system, String drivers, String userName, String passWord,String aliasName) {
 //        User atlanta@gmail.com
 //        Password: Asdf4321-
-        String userName = "atlanta@gmail.com";
-        String password = "Asdf4321-";
-
-        System.setProperty("webdriver.chrome.driver", "D:\\BrowserDriver\\chromedriver.exe");
 
 
-        driver = new ChromeDriver();
+
+        if(system.equalsIgnoreCase("webdriver.chrome.driver")){
+            System.setProperty(system,drivers );
+            driver = new ChromeDriver();
+            this.alias=aliasName;
+            }
+        else if(system.equalsIgnoreCase("webdriver.gecko.driver")){
+            System.setProperty(system,drivers );
+            driver = new FirefoxDriver();
+            this.alias=aliasName;
+        }
+
+
+
         wait = new WebDriverWait(driver, 10);
         action = new Actions(driver);
         elements = new reusablePage(driver);
@@ -38,7 +50,7 @@ public class baseDriver {
         email.sendKeys(userName);
 
         WebElement passwd = driver.findElement(By.id("passwd"));
-        passwd.sendKeys(password);
+        passwd.sendKeys(passWord);
 
         WebElement submitLogin = driver.findElement(By.id("SubmitLogin"));
         submitLogin.click();
