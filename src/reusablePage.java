@@ -82,9 +82,6 @@ public class reusablePage {
     @FindBy(id = "wishlist_button")
     public WebElement addToWishList;
 
-//    @FindBy(css = "a[title='Close']")
-//    public WebElement closeComfirmati;
-
     @FindBy(xpath = "//*[@id=\"product\"]/div[2]/div/div/a")
     public WebElement closeComfirmation;
 
