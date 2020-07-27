@@ -39,7 +39,7 @@ public class ReplitTestNG03 extends utilities {
         System.out.println("Number of 4&5 star hotels: " + starList.size());
         SoftAssert soft = new SoftAssert();
 
-        soft.assertEquals(hotelList, starList, "There are non-star hotels exist in page");
+        soft.assertEquals(hotelList.size(), starList.size(), "There are non-star hotels exist in page");
 
         for (int i = 0; i < starList.size(); i++) {
             System.out.println(starList.get(i).getText());

@@ -21,7 +21,7 @@ public class utilities {
         System.setProperty("webdriver.chrome.driver","D:\\BrowserDriver\\chromedriver.exe" );
         driver = new ChromeDriver();
         js=(JavascriptExecutor) driver;
-        wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, 5);
         action = new Actions(driver);
 
         driver.get("https://www.hotels.com/search.do?resolved-location=CITY%3A1482664%3AUNKNOWN%3AUNKNOWN&destination-id=\n" +
