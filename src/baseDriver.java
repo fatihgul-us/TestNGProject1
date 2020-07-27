@@ -60,9 +60,9 @@ public class baseDriver {
         submitLogin.click();
 
     }
-//    @AfterClass
-//    public void closeBrowser(){
-//
-//        driver.quit();
-//    }
+    @AfterClass
+    public void closeBrowser(){
+
+        driver.quit();
+    }
 }
