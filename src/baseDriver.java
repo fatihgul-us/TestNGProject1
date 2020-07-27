@@ -1,10 +1,12 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
@@ -15,6 +17,7 @@ public class baseDriver {
     protected Actions action;
     protected reusablePage elements;
     protected String alias;
+    protected JavascriptExecutor js;
 
     @BeforeClass(alwaysRun = true)
     @Parameters({"System","Driver","userName", "passWord","aliasName"})
@@ -40,6 +43,7 @@ public class baseDriver {
         wait = new WebDriverWait(driver, 10);
         action = new Actions(driver);
         elements = new reusablePage(driver);
+        js =(JavascriptExecutor)driver;
 
         driver.get("http://automationpractice.com/index.php");
         driver.manage().window().maximize();
@@ -56,5 +60,9 @@ public class baseDriver {
         submitLogin.click();
 
     }
-
+//    @AfterClass
+//    public void closeBrowser(){
+//
+//        driver.quit();
+//    }
 }

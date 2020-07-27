@@ -25,14 +25,6 @@ public class ReplitTestNG03 extends utilities {
         List<WebElement> hotelList = driver.findElements(By.cssSelector("section[class='hotel-wrap']"));
         List<WebElement> starList = driver.findElements(By.cssSelector("span[class='star-rating-text star-rating-text-strong']"));
 
-//        do {
-//            js.executeScript("arguments[0].scrollIntoView();", hotelList.get(hotelList.size() - 1));
-//            wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.cssSelector("section[class='hotel-wrap']"), hotelList.size()));
-//            System.out.println(hotelList.size());
-//            hotelList = driver.findElements(By.cssSelector("section[class='hotel-wrap']"));
-//
-//        } while (hotelList.size() <= 50);
-
         while (true) {
             try {
                 hotelList = driver.findElements(By.cssSelector("section[class='hotel-wrap']"));

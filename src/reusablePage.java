@@ -72,6 +72,51 @@ public class reusablePage {
     @FindBy(xpath = "//ul[@class='last_item alternate_item box']  //li[9] /a[2]")
     public WebElement deleteButton;
 
+    @FindBy(xpath = "//*[@id=\"block_top_menu\"]/ul/li[2]/a")
+    public WebElement dressesButton;
+
+
+    @FindBy(css = "h5 a[title='Printed Chiffon Dress']")
+    public WebElement chiffonDress;
+
+    @FindBy(id = "wishlist_button")
+    public WebElement addToWishList;
+
+//    @FindBy(css = "a[title='Close']")
+//    public WebElement closeComfirmati;
+
+    @FindBy(xpath = "//*[@id=\"product\"]/div[2]/div/div/a")
+    public WebElement closeComfirmation;
+
+    @FindBy(xpath = "//a[@class='account'] /span")
+    public WebElement accountName;
+
+
+
+    @FindBy(css = "a[title='My wishlists']")
+    public WebElement wishListButton;
+
+    @FindBy(css = "i[class='icon-remove']")
+    public WebElement removeIcon;
+
+    @FindBy(xpath = "//table[@class='table table-bordered']/tbody/tr/td[5]/a")
+    public WebElement viewButton;
+
+    @FindBy(id = "s_title")
+    public WebElement productName;
+
+    @FindBy(css= "h1[itemprop='name']")
+    public WebElement selectedProduct;
+
+
+
+
+
+
+
+
+
+
 
 
 
